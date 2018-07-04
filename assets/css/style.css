@@ -1,0 +1,28 @@
+.container{
+    /*background-repeat: ;*/
+    width: 50%;
+    margin:20px 25% 20px 25%;
+    padding:10px;
+    align-items: center;
+    
+    
+}
+.main-content{
+    width: 80%;
+    background-color:rgb(245, 245, 112);
+    margin:10px 10% 10px 10%;
+    padding-left:30px;
+    padding-bottom: 40px;
+    
+}
+h1{
+    color:blue;
+    font-size: 50px;
+    text-align: center;
+}
+.start-button{
+    
+    background-color:pink;
+
+    padding:0px 100px 0px 100px;
+}
