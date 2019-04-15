@@ -46,7 +46,7 @@ $(document).ready(function(){
     var choice;
     var coanswer;
    var i=0;
-   var count=10;
+   var count=30;
    var choiceoption=1;
    var correctanswer=null;
    var choiceval=null;
@@ -54,6 +54,7 @@ $(document).ready(function(){
    var wrong=0;
    var unanswered=0;
     var timer;
+    var countTime;
     //To start the game click the start button and number one question 
     //will display with second timer 
     $(".start-button").show();
@@ -61,10 +62,10 @@ $(document).ready(function(){
         $(this).hide();
         $("div.animation, div.startover").on({
             mouseenter: function(){
-                $(this).animate({"font-size":"20px"}).css("background-color", "pink");
+                $(this).animate({"font-size":"30px"}).css("", "yellow");
             }, 
             mouseleave: function(){
-                $(this).animate({"font-size":"15px"}).css("background-color", "rgb(245, 245, 112)");
+                $(this).animate({"font-size":"28px"}).css("color","");
             }
         });
         start();
@@ -83,11 +84,12 @@ $(document).ready(function(){
         count--;
         if(count<0){
             clearInterval(timer);
-            count=10;
+            count=30;
             correctanswer=null;
             choiceval=null;
-            start();  
+             
             timer=setInterval(counter,1000);
+            start(); 
         }
       $(".timer").html("Time remaining: " + "00:" + count + " seconds");  
     }
@@ -98,10 +100,10 @@ $(document).ready(function(){
         if(i<mathQuestions.length){
            
                 question = mathQuestions[i].questions;
-                correctanswer=mathQuestions[i].answer;
+                correctanswer= mathQuestions[i].answer;
                 $(".questions").text(question);
-                for(var j = 0; j<mathQuestions[i].choices.length;j++){
-                    choice=mathQuestions[i].choices[j];
+                for(var j = 0; j < mathQuestions[i].choices.length; j++){
+                    choice = mathQuestions[i].choices[j];
                   $(".choice"+ (j+1)).html(choice); 
                 }
                 
@@ -123,6 +125,7 @@ $(document).ready(function(){
                             
                             setTimeout(function () {
                                 clearInterval(timer);
+                                    countTime = count;
                                     count=0;
                                     
                                     timer=setInterval(counter, 1000);
@@ -136,6 +139,7 @@ $(document).ready(function(){
                             $(".animation").html("");
                             setTimeout(function () {
                                 clearInterval(timer);
+                                countTime= count;
                                     count=0;
                                     
                                     timer=setInterval(counter, 1000);
@@ -148,16 +152,20 @@ $(document).ready(function(){
                 i++;       
         }
         else {
-            result();
+            result(countTime);
         }  
      return;  
     }
     // function to display the total score and start over. 
     //on click startover it  displays the questions 
-    function result(){
+    function result(countTime){
+        console.log(countTime);
+        count= countTime;
         $(".animation").hide();
-            $(".timer").hide();
+            // $(".timer").remove();
             clearInterval(timer);
+            
+            $(".timer").html("Time remaining: " + "00:" + count + " seconds");
             unanswered=10-(wrong+correct);
             $(".questions").show();
             $(".questions").html("Correct Answer :  "+'<b>'+correct+'</b>'
@@ -173,7 +181,7 @@ $(document).ready(function(){
                 //$(".questions").hide();
                 $(".questions").html("<h3>Mathimatics Questions will Display in 10 seconds</h3>");
                 clearInterval(timer);
-                var count=1;
+                 count=10;
                 timer=setInterval(counter,1000);
                 i=0;
             });

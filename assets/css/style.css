@@ -1,7 +1,7 @@
 .container{
     /*background-repeat: ;*/
-    width: 50%;
-    margin:20px 25% 20px 25%;
+    width: 90%;
+    margin: auto;
     padding:10px;
     align-items: center;
     
@@ -9,20 +9,57 @@
 }
 .main-content{
     width: 80%;
-    background-color:rgb(245, 245, 112);
-    margin:10px 10% 10px 10%;
-    padding-left:30px;
-    padding-bottom: 40px;
+    background-color:rgb(206, 67, 25);
+    margin: 30px auto;
+    
     
 }
+.row{
+    font-family: 'Abril Fatface', cursive;
+    background-color: rgb(41, 40, 40);
+    padding: 30px;
+}
 h1{
-    color:blue;
-    font-size: 50px;
+    color:rgb(224, 224, 231);
+    font-size: 80px;
+    text-align: center;
+}
+.question-type{
+    color: rgb(235, 190, 69);
+    text-align: center;
+    font-size: 35px;
+}
+.button-tostart{
+    /* margin:20px; */
     text-align: center;
 }
 .start-button{
+    border-radius: 10px;
+    border: none;
+    background-color: rgb(235, 190, 69);
+    font-size: 28px;
+    padding:0px 60px 0px 60px;
+}
+.display-area{
+    text-align: center;
+    /* font-size: 28px; */
+    padding: 30px;
+}
+.timer,.questions, .choices{
+    font-size: 28px;
+}
+.animation:hover{
+    color: rgb(235, 190, 69);
+}
+.choices{
+    text-align: center;
+    display: inline-block;
+}
+.animation{
     
-    background-color:pink;
-
-    padding:0px 100px 0px 100px;
+    text-align: left;
+}
+.startover{
+    color: rgb(235, 190, 69) ;
+    font-size: 24px;
 }

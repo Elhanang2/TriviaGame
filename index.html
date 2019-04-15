@@ -6,45 +6,45 @@
     <title>Trivia Game</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
     <script src="https://code.jquery.com/jquery.js"></script>
+
     
 </head>
 <body>
-    <div class="container" style="background-image:url(assets/images/background.jpg)">
+    <div class="container" style="background-image:url(assets/images/background1.jpg)">
         <div class="main-content">
             <div class="row">
                 <h1>Totally Trivial Trivia!</h1>
             </div>
-            <button class="start-button"  type="text"><h2>Start</h2></button>
-            <div class="timer">
-
+            <div class="question-type">
+                <h2>Mathematics Questions</h2>
             </div>
-            <br><br>
-            <div class="questions">
-
+            <div class="button-tostart">
+                <button class="start-button"  type="text"><h2>Start</h2></button>
             </div>
+            <div class="display-area">
+                <div class="timer">
+
+                </div>
+                <br><br>
+                <div class="questions">
+
+                </div>
                 <br>
                 <div class="choices">
-                    <div id="choice1"  class="choice1 animation">
-                            
-                    </div>
-                    <div id="choice2"class="choice2 animation">
-                        
-                    </div>
-                    <div class="choice3 animation">
-                        
-                    </div>
-                    <div  class="choice4 animation">
-                        
-                    </div>
-                    <div  class="choice5 animation">
-                        
-                    </div>
+                    <div id="choice1"  class="choice1 animation"></div>
+                    <div id="choice2"class="choice2 animation"></div>
+                    <div class="choice3 animation"></div>
+                    <div  class="choice4 animation"></div>
+                    <div  class="choice5 animation"></div>
+                    
                 </div> 
+                <br>
                 <div class="startover">
                     
                 </div>
-            
+            </div>
         </div>
     </div>
     <script src="assets/javascript/app.js"></script>
