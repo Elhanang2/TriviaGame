@@ -168,7 +168,7 @@ $(document).ready(function(){
             $(".timer").html("Time remaining: " + "00:" + count + " seconds");
             unanswered=10-(wrong+correct);
             $(".questions").show();
-            $(".questions").html("Correct Answer :  "+'<b>'+correct+'</b>'
+            $(".questions").html("<span>All Done,Heres How You Did!</span>"+"<br>"+"<br>"+"Correct Answer :  "+'<b>'+correct+'</b>'
             +"<br>"+"Incorrect Answer: "+"<b>"+wrong+"</b>"
             +"<br>"+"Unanswered : "+'<b>'+unanswered+'</b>');
             
