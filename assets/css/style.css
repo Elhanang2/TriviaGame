@@ -1,18 +1,24 @@
+body{
+    padding: 0;
+    margin: 0;
+}
 .container{
-    /*background-repeat: ;*/
-    width: 90%;
+    margin: 0;
+    background-image: url('../images/background1.jpg');
+    background-size: cover ;
+    background-repeat: no-repeat;
     margin: auto;
-    padding:10px;
+    padding: 30px;
+    height: 100%;
     align-items: center;
-    
-    
 }
 .main-content{
-    width: 80%;
+    width: 100%;
+    height: 100vh;
+    margin: auto ;
+    /* vertical-align: middle; */
     background-color:rgb(206, 67, 25);
-    margin: 30px auto;
-    
-    
+    padding-bottom: 100px;
 }
 .row{
     font-family: 'Abril Fatface', cursive;
@@ -28,9 +34,9 @@ h1{
     color: rgb(235, 190, 69);
     text-align: center;
     font-size: 35px;
+    padding: 10px;
 }
 .button-tostart{
-    /* margin:20px; */
     text-align: center;
 }
 .start-button{
@@ -42,7 +48,6 @@ h1{
 }
 .display-area{
     text-align: center;
-    /* font-size: 28px; */
     padding: 30px;
 }
 .timer,.questions, .choices{
@@ -56,7 +61,6 @@ h1{
     display: inline-block;
 }
 .animation{
-    
     text-align: left;
 }
 .startover{
@@ -65,5 +69,22 @@ h1{
 }
 .questions span{
     color: rgb(235, 190, 69);
+    
+}
+@media only screen and (max-width: 500px){
+    h1{
+        font-size: 50px;
+    }
+    .question-type{
+        font-size: 20px;
+        padding: 10px;
+    }
+    
+    .start-button{
+        font-size: 20px;
+        padding:0px 30px 0px 30px;
+    }
+}
+@media screen and (min-width: 1200px){
     
 }
